@@ -4,6 +4,7 @@ app.controller('StudentController', function ($scope, $rootScope, Students) {
   $rootScope.$on('change:tasks', function (event, tasks) {
     $scope.tasks = tasks;
     console.log($scope.tasks);
+    $scope.$apply(); // does this work?
 
     // $scope.Applied          = tasks['Applied:'];
     // $scope.Graveyard        = tasks['Graveyard:'];
