@@ -33,9 +33,9 @@ module.exports = function (app) {
   });
 
   app.get('/test', function (req, res) {
-    var url = asanaURL + '/tasks/13006575179249/addProject'
+    var url = asanaURL + '/tasks/13006575179208/addProject'
     var authToken = 'Bearer ' + req.user.asana.token;
-    var data = JSON.stringify({data : '13006575179208'})
+    var data = JSON.stringify({data : 'project=insert_after=13006575179249'})
 
     
     request({
