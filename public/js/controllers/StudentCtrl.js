@@ -2,10 +2,7 @@ app.controller('StudentController', function ($scope, $rootScope, Students) {
   $scope.tasks = [];
 
   $rootScope.$on('change:tasks', function (event, tasks) {
-    $scope.$apply(function () {
-        $scope.tasks = tasks;
-    }); // the action needs to wrapped in a callback... Angular performs whatever work is inside the callback, then updates all views
-    // http://jimhoskins.com/2012/12/17/angularjs-and-apply.html
+    $scope.tasks = tasks;
     console.log($scope.tasks);
 
     // $scope.Applied          = tasks['Applied:'];

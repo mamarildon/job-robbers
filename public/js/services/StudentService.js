@@ -25,7 +25,7 @@ app.factory('Students', function ($http, $rootScope, $location) {
   var Students = {};
 
   Students.fetchTasks = function () {
-    $http.get('/users')
+    return $http.get('/users')
       .then(function (d) {
         parseData(d.data);
       })
@@ -38,6 +38,14 @@ app.factory('Students', function ($http, $rootScope, $location) {
       });
   };
 
+  Students.changeParent = function () {
+    return $http.get('/test')
+      .then(function (d) {
+        console.log('parent change', d.data);
+      })
+  };
+
   Students.fetchTasks();
+  Students.changeParent();
 
 });
